@@ -5,7 +5,7 @@
 -- ================================================================
 
 local API_URL = "https://0df0d4ce-f84e-423b-971d-a243eea7e01f-00-1pzapgoozo9mk.picard.replit.dev/api/keys/validate"
-local HUB_URL = "https://github.com/lxpzdylib41-web/cookiesxduels/blob/main/cookiesxacecodetyper.lua"
+local HUB_URL = "https://github.com/lxpzdylib41-web/cookiesxduels/blob/main/cookiesxacecodetyper.lua.lua"
 
 local HttpService = game:GetService("HttpService")
 local player      = game.Players.LocalPlayer
