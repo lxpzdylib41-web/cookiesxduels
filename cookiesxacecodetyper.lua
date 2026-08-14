@@ -1949,25 +1949,21 @@ addCorner(
     15
 )
 
-local BrandImage =
-    Instance.new("ImageLabel")
+local BrandImage = Instance.new("ImageLabel")
 
-BrandImage.Name =
-    "Logo"
+BrandImage.Name = "Logo"
+BrandImage.AnchorPoint = Vector2.new(0.5, 0.5)
+BrandImage.Position = UDim2.fromScale(0.5, 0.5)
+BrandImage.Size = UDim2.fromOffset(100, 100)
 
-BrandImage.Size =
-    UDim2.fromScale(1, 1)
+BrandImage.BackgroundTransparency = 1
+BrandImage.Image = "rbxassetid://7072718368"
+BrandImage.ImageTransparency = 0
+BrandImage.Visible = true
+BrandImage.ScaleType = Enum.ScaleType.Fit
+BrandImage.ZIndex = 100
 
-BrandImage.BackgroundTransparency =
-    1
-BrandImage.Image =   
-  "rbxassetid://7072718368"
-
-BrandImage.ScaleType =
-    Enum.ScaleType.Fit
-
-BrandImage.Parent =
-    BrandMark
+BrandImage.Parent = BrandMark
 
 addCorner(
     BrandImage,
