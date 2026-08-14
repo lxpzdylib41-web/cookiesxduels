@@ -1961,7 +1961,7 @@ BrandImage.Size =
 BrandImage.BackgroundTransparency =
     1
 BrandImage.Image =   
-  "rbxassetid://10511856020"
+  "rbxassetid://7072718368"
 
 BrandImage.ScaleType =
     Enum.ScaleType.Fit
