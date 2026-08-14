@@ -2709,39 +2709,43 @@ addCorner(
     Plus,
     5
 )
-
 local function decr()
+    if changingSubmitAfter then return end
+    changingSubmitAfter = true
 
-    _submitAfter =
-        math.max(
-            1,
-            _submitAfter - 1
-        )
+    _submitAfter -= 1
 
-    Count.Text =
-        tostring(_submitAfter)
+    Count.Text = tostring(_submitAfter)
 
-    savedConfig.submitAfter =
-        _submitAfter
+    savedConfig.submitAfter = _submitAfter
 
     clearAceCapture()
 
     saveConfig()
+
+    task.delay(0.1, function()
+        changingSubmitAfter = false
+    end)
 end
+local changingSubmitAfter = false
 
 local function incr()
+    if changingSubmitAfter then return end
+    changingSubmitAfter = true
 
     _submitAfter += 1
 
-    Count.Text =
-        tostring(_submitAfter)
+    Count.Text = tostring(_submitAfter)
 
-    savedConfig.submitAfter =
-        _submitAfter
+    savedConfig.submitAfter = _submitAfter
 
     clearAceCapture()
 
     saveConfig()
+
+    task.delay(0.1, function()
+        changingSubmitAfter = false
+    end)
 end
 
 Minus.Activated:Connect(decr)
