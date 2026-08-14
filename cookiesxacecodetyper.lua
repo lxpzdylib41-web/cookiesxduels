@@ -1759,7 +1759,7 @@ BackgroundImage.BackgroundTransparency =
     1
 
 BackgroundImage.Image =
-    "rbxassetid://137692455767789"
+    "rbxassetid://10511856020"
 
 BackgroundImage.ImageTransparency =
     0
@@ -1949,21 +1949,25 @@ addCorner(
     15
 )
 
-local BrandImage = Instance.new("ImageLabel")
+local BrandImage =
+    Instance.new("ImageLabel")
 
-BrandImage.Name = "Logo"
-BrandImage.AnchorPoint = Vector2.new(0.5, 0.5)
-BrandImage.Position = UDim2.fromScale(0.5, 0.5)
-BrandImage.Size = UDim2.fromOffset(100, 100)
+BrandImage.Name =
+    "Logo"
 
-BrandImage.BackgroundTransparency = 1
-BrandImage.Image = "rbxassetid://7072718368"
-BrandImage.ImageTransparency = 0
-BrandImage.Visible = true
-BrandImage.ScaleType = Enum.ScaleType.Fit
-BrandImage.ZIndex = 100
+BrandImage.Size =
+    UDim2.fromScale(1, 1)
 
-BrandImage.Parent = BrandMark
+BrandImage.BackgroundTransparency =
+    1
+BrandImage.Image =   
+  "rbxassetid://10511856020"
+
+BrandImage.ScaleType =
+    Enum.ScaleType.Fit
+
+BrandImage.Parent =
+    BrandMark
 
 addCorner(
     BrandImage,
